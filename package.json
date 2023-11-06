@@ -1,0 +1,29 @@
+{
+  "name": "twitterendgame",
+  "version": "1.0.0",
+  "description": "Twitter Endgame App",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "server": "nodemon server.js",
+    "client": "npm start --prefix client",
+    "dev": "concurrently \"npm run server\" \"npm run client\"",
+    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --prefix client && npm run build --prefix client"
+  },
+  "engines": {
+    "node": "11.11.0",
+    "npm": "6.9.0"
+  },
+  "author": "John Gibson",
+  "license": "MIT",
+  "dependencies": {
+    "concurrently": "^6.2.1",
+    "express": "^4.18.2",
+    "react": "^17.0.2",
+    "react-scripts": "^4.0.3",
+    "twitter": "^1.7.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.12"
+  }
+}
